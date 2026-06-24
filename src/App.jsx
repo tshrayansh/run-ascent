@@ -172,6 +172,21 @@ function PulsePreview({ full = false }) {
           </article>
         ))}
       </div>
+
+      {/* Strava summary widget iframe inserted below */}
+      <div className="strava-widget" style={{ marginTop: 20 }}>
+        <iframe
+          title="Strava club summary"
+          allowTransparency="true"
+          frameBorder="0"
+          loading="lazy"
+          scrolling="no"
+          width="300"
+          height="160"
+          src="https://www.strava.com/clubs/1914011/latest-rides/f53869ca5487136ef85f7cca4a834d5a536aa15d?show_rides=false"
+        ></iframe>
+      </div>
+
       <div className="board">
         <div className="board-title">
           <p className="section-kicker">Consistency Board</p>
