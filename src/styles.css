@@ -658,3 +658,36 @@ dd {
     padding-bottom: 138px;
   }
 }
+
+/* Strava widget styles */
+.strava-widget {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--forest);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  position: relative;
+  margin-top: 1.25rem;
+}
+
+.strava-widget iframe {
+  width: 100%;
+  height: 160px;
+  border: 0;
+  display: block;
+  background: transparent;
+}
+
+.strava-widget::before {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; top: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--orange), transparent);
+  pointer-events: none;
+}
+
+@media (max-width: 340px) {
+  .strava-widget { width: 90%; margin-left: auto; margin-right: auto; }
+}
