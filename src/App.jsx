@@ -1,13 +1,12 @@
 import { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import {
-  consistencyBoard,
   events,
   galleryItems,
-  pulseStats,
   routes,
   siteConfig,
 } from './data/site.js';
+import stravaCache from './data/strava-cache.json';
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -173,14 +172,17 @@ function EventCards() {
 }
 
 function PulsePreview({ full = false }) {
+  const { pulseStats, consistencyBoard, isLive } = stravaCache;
+
   return (
     <section className={full ? 'paper-section pulse-page' : 'paper-section pulse-preview'}>
       <div className="section-heading">
-        <p className="section-kicker">Club pulse</p>
+        <p className="section-kicker">Club pulse {isLive && '· LIVE'}</p>
         <h2>{full ? 'CURRENT-WEEK CLUB DATA' : 'MOVE TOGETHER, COUNT CONSISTENCY'}</h2>
         <p className="section-copy">
-          Static placeholder data for version 1. Future Strava integration can plug into
-          the same structure without changing the page layout.
+          {isLive 
+            ? 'Club stats fetched live from Strava. Showing recent group activities and consistency rankings.'
+            : 'Static placeholder data for version 1. Future Strava integration can plug into the same structure without changing the page layout.'}
         </p>
       </div>
       <div className="stat-grid">
@@ -190,20 +192,6 @@ function PulsePreview({ full = false }) {
             <span>{stat.label}</span>
           </article>
         ))}
-      </div>
-
-      {/* Strava summary widget iframe inserted below */}
-      <div className="strava-widget" style={{ marginTop: 20 }}>
-        <iframe
-          title="Strava club summary"
-          allowTransparency="true"
-          frameBorder="0"
-          loading="lazy"
-          scrolling="no"
-          width="300"
-          height="160"
-          src="https://www.strava.com/clubs/1914011/latest-rides/f53869ca5487136ef85f7cca4a834d5a536aa15d?show_rides=false"
-        ></iframe>
       </div>
 
       <div className="board">

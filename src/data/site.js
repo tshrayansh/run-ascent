@@ -77,18 +77,6 @@ export const routes = [
   },
 ];
 
-export const pulseStats = [
-  { value: '28', label: 'Active Climbers' },
-  { value: '163.4 KM', label: 'Moved Together' },
-  { value: '2,140 M', label: 'Climbed' },
-];
-
-export const consistencyBoard = [
-  { name: 'Ananya', days: '4 DAYS' },
-  { name: 'Aditya', days: '3 DAYS' },
-  { name: 'Nandana', days: '3 DAYS' },
-];
-
 export const galleryItems = [
   {
     caption: 'Early light near campus',
