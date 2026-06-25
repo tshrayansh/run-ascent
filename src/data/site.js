@@ -7,9 +7,9 @@ export const siteConfig = {
     note: 'ALL PACES',
   },
   links: {
-    strava: 'https://www.strava.com/clubs/',
+    strava: 'https://www.strava.com/clubs/ascent-runners-club',
     whatsapp: 'https://chat.whatsapp.com/',
-    instagram: 'https://www.instagram.com/',
+    instagram: 'https://www.instagram.com/runascent/',
   },
 };
 
