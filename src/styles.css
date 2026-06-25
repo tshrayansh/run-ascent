@@ -153,9 +153,9 @@ dt,
 
 .hill {
   background: var(--green);
-  bottom: -20px;
+  bottom: 0;
   clip-path: polygon(0 65%, 14% 46%, 30% 58%, 46% 29%, 62% 49%, 77% 24%, 100% 52%, 100% 100%, 0 100%);
-  height: clamp(250px, 42vh, 430px);
+  height: clamp(380px, 55vh, 600px);
   left: 0;
   position: absolute;
   right: 0;
@@ -164,9 +164,9 @@ dt,
 
 .hill-front {
   background: #0b100d;
-  bottom: -40px;
+  bottom: 0;
   clip-path: polygon(0 52%, 18% 38%, 33% 57%, 51% 33%, 67% 62%, 82% 44%, 100% 58%, 100% 100%, 0 100%);
-  height: clamp(210px, 34vh, 360px);
+  height: clamp(320px, 46vh, 500px);
   z-index: -2;
 }
 
