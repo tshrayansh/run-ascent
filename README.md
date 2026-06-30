@@ -1,3 +1,3 @@
-Hello welcome to the first draft of Ascent run club website 
+Hello welcome to the first draft of Ascent run club website , work in progress
 
 
